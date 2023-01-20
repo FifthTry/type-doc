@@ -1,10 +1,5 @@
 
--- boolean is-mobile: false
-
--- is-mobile: true
-if: $ftd.device == mobile
-
--- string font-family: $fpm.font-display
+;; -- string font-family: $fpm.font-display
 
 
 
@@ -12,82 +7,84 @@ if: $ftd.device == mobile
 
 
 -- ftd.column:
-width: fill
-padding-horizontal: 20
-padding-vertical: 20
-padding-horizontal if $is-mobile: 20
-background-color: $fpm.color.main.background.base
+width: fill-container
+padding-horizontal.px: 20
+padding-vertical.px: 20
+padding-horizontal.px if { ftd.device == "mobile" }: 20
+background.solid: $inherited.colors.background.base
 
---- ftd.text: Typography
-role: $fpm.type.heading-large
-color: $fpm.color.main.text-strong
-margin-bottom: 28
+-- ftd.text: Typography
+role: $inherited.types.heading-large
+color: $inherited.colors.text-strong
+margin-bottom.px: 28
 
---- heading-box: \$fpm.type.heading-large
+-- heading-box: \$inherited.types.heading-large
 line-height: 48
 size: 40
 weight: 400
-headingtitle:$fpm.type.heading-large
+headingtitle: $inherited.types.heading-large
 
---- heading-box: \$fpm.type.heading-medium
+-- heading-box: \$inherited.types.heading-medium
 line-height: 44
 size: 32
 weight: 400
-headingtitle:$fpm.type.heading-medium
+headingtitle: $inherited.types.heading-medium
 
---- heading-box: \$fpm.type.heading-small
+-- heading-box: \$inherited.types.heading-small
 line-height: 36
 size: 24
 weight: 400
-headingtitle:$fpm.type.heading-small
+headingtitle: $inherited.types.heading-small
 
---- heading-box: \$fpm.type.heading-hero
+-- heading-box: \$inherited.types.heading-hero
 line-height: 60
 size: 48
 weight: 400
-headingtitle:$fpm.type.heading-hero
+headingtitle: $inherited.types.heading-hero
 
---- heading-box: \$fpm.type.copy-tight
+-- heading-box: \$inherited.types.copy-tight
 line-height: 20
 size: 16
 weight: 400
-headingtitle:$fpm.type.copy-tight
+headingtitle: $inherited.types.copy-tight
 
---- heading-box: \$fpm.type.copy-relaxed
+-- heading-box: \$inherited.types.copy-relaxed
 line-height: 24
 size: 16
 weight: 400
-headingtitle:$fpm.type.copy-relaxed
+headingtitle: $inherited.types.copy-relaxed
 
---- heading-box: \$fpm.type.copy-large
+-- heading-box: \$inherited.types.copy-large
 line-height: 28
 size: 20
 weight: 400
-headingtitle:$fpm.type.copy-large
+headingtitle: $inherited.types.copy-large
 
---- heading-box: \$fpm.type.label-big
+-- heading-box: \$inherited.types.label-big
 line-height: 22
 size: 16
 weight: 400
-headingtitle:$fpm.type.label-big
+headingtitle: $inherited.types.label-big
 
---- heading-box: \$fpm.type.label-small
+-- heading-box: \$inherited.types.label-small
 line-height: 16
 size: 14
 weight: 400
-headingtitle:$fpm.type.label-small
+headingtitle: $inherited.types.label-small
 
---- heading-box: \$fpm.type.fine-print
+-- heading-box: \$inherited.types.fine-print
 line-height: 16
 size: 14
 weight: 400
-headingtitle:$fpm.type.fine-print
+headingtitle: $inherited.types.fine-print
 
---- heading-box: \$fpm.type.blockquote
+-- heading-box: \$inherited.types.blockquote
 line-height: 22
 size: 16
 weight: 400
-headingtitle:$fpm.type.blockquote
+headingtitle: $inherited.types.blockquote
+
+-- end: ftd.column
 
 
 
@@ -98,167 +95,188 @@ headingtitle:$fpm.type.blockquote
 
 
 
--- ftd.column heading-box:
+-- component heading-box:
 caption title:
 optional integer line-height:
 optional integer weight:
 optional integer size:
-ftd.type headingtitle:
-string font-family: $font-family
+ftd.responsive-type headingtitle: 
+;;string font-family: $font-family
 
---- heading-box-desktop: $title
-if: not $is-mobile
-line-height: $line-height
-weight: $weight
-size: $size
-headingtitle: $headingtitle
-font-family: $font-family
+-- ftd.column:
 
---- heading-box-mobile: $title
-if: $is-mobile
-line-height: $line-height
-weight: $weight
-size: $size
-headingtitle: $headingtitle
-font-family: $font-family
+-- heading-box-desktop: $heading-box.title
+if: { ftd.device != "mobile" }
+line-height: $heading-box.line-height
+weight: $heading-box.weight
+size: $heading-box.size
+headingtitle: $heading-box.headingtitle
+;;font-family: $heading-box.font-family
 
+-- heading-box-mobile: $heading-box.title
+if: { ftd.device == "mobile" }
+line-height: $heading-box.line-height
+weight: $heading-box.weight
+size: $heading-box.size
+headingtitle: $heading-box.headingtitle
+;;font-family: $heading-box.font-family
 
+-- end: ftd.column
 
-
-
-
-
-
+-- end: heading-box
 
 
--- ftd.column heading-box-desktop:
+
+
+
+
+
+
+
+
+-- component heading-box-desktop:
 caption title:
 optional integer line-height:
 optional integer weight:
 optional integer size:
-ftd.type headingtitle:
-string font-family: 
-border-color: $fpm.color.main.text-strong
-border-width: 1
-border-radius: 8
-padding-vertical: 24
-padding-horizontal: 24
-width: 650
-height: 196
-margin-top: 28
-margin-bottom: 28
+ftd.responsive-type headingtitle: 
+;;string font-family: 
 
---- ftd.row:
-width: fill
+-- ftd.column:
+border-color: $inherited.colors.text-strong
+border-width.px: 1
+border-radius.px: 8
+padding-vertical.px: 24
+padding-horizontal.px: 24
+width.fixed.px: 650
+height.fixed.px: 196
+margin-top.px: 28
+margin-bottom.px: 28
 
---- ftd.text: $title
-color: $fpm.color.main.text-strong
-role: $fpm.type.copy-large
+-- ftd.row:
+width: fill-container
+
+-- ftd.text: $heading-box-desktop.title
+color: $inherited.colors.text-strong
+role: $inherited.types.copy-large
 anchor: parent
-top: -38
-left: 0
-background-color: $fpm.color.main.background.base
-padding-horizontal: 8
+top.px: -38
+left.px: 0
+background.solid: $inherited.colors.background.base
+padding-horizontal.px: 8
 
---- container: ftd.main
+-- end: ftd.row
 
---- ftd.row:
-width: fill
-id: second-container
-spacing: 24
+-- ftd.row:
+width: fill-container
+spacing.px: 24
 
---- ftd.column:
-width: percent 35
-spacing: 12
-id: first-container
 
---- ftd.row:
-width: fill
-spacing: 8
+-- ftd.column:
+width.fixed.percent: 35
+spacing.px: 12
 
---- ftd.text: line-height
-color: $fpm.color.main.text
-role: $fpm.type.label-big
+-- ftd.row:
+width: fill-container
+spacing.px: 8
+
+-- ftd.text: line-height
+color: $inherited.colors.text
+role: $inherited.types.label-big
 white-space: nowrap
 
---- ftd.integer: $line-height
-color: $fpm.color.main.text
-role: $fpm.type.label-big
-width: fill
+-- ftd.integer: $heading-box-desktop.line-height
+color: $inherited.colors.text
+role: $inherited.types.label-big
+width: fill-container
 
---- container: first-container
+-- end: ftd.row
 
---- ftd.row:
-width: fill
-spacing: 8
+-- ftd.row:
+width: fill-container
+spacing.px: 8
 
---- ftd.text: size:
-color: $fpm.color.main.text
-role: $fpm.type.label-big
+-- ftd.text: size:
+color: $inherited.colors.text
+role: $inherited.types.label-big
 white-space: nowrap
 
---- ftd.integer: $size
-color: $fpm.color.main.text
-role: $fpm.type.label-big
-width: fill
+-- ftd.integer: $heading-box-desktop.size
+color: $inherited.colors.text
+role: $inherited.types.label-big
+width: fill-container
 
---- container: first-container
+-- end: ftd.row
 
---- ftd.row:
-width: fill
-spacing: 8
+-- ftd.row:
+width: fill-container
+spacing.px: 8
 
---- ftd.text: weight:
-color: $fpm.color.main.text
-role: $fpm.type.label-big
+-- ftd.text: weight:
+color: $inherited.colors.text
+role: $inherited.types.label-big
 white-space: nowrap
 
---- ftd.integer: $weight
-color: $fpm.color.main.text
-role: $fpm.type.label-big
-width: fill
+-- ftd.integer: $heading-box-desktop.weight
+color: $inherited.colors.text
+role: $inherited.types.label-big
+width: fill-container
 
---- container: first-container
+-- end: ftd.row
 
---- ftd.row:
-width: fill
-spacing: 8
+/-- ftd.row:
+width: fill-container
+spacing.px: 8
 
---- ftd.text: Font-family:
-color: $fpm.color.main.text
-role: $fpm.type.label-big
+/-- ftd.text: Font-family:
+color: $inherited.colors.text
+role: $inherited.types.label-big
 white-space: nowrap
 
---- ftd.text: $font-family
-color: $fpm.color.main.text
-role: $fpm.type.label-big
-width: fill
+/-- ftd.text: $heading-box-desktop.font-family
+color: $inherited.colors.text
+role: $inherited.types.label-big
+width: fill-container
 
---- container:second-container
+/-- end: ftd.row
 
---- ftd.column:
-width: percent 65
+-- end: ftd.column
 
---- ftd.row:
-padding-vertical: 12
-padding-horizontal: 12
-min-width: 374
-min-height: 146
-background-color: $fpm.color.main.background.step-1
-border-color: $fpm.color.main.border-strong
-border-width: 1
-border-radius: 8
-align: center
+-- ftd.column:
+width.fixed.percent: 65
 
---- ftd.column:
-align: center
-width: fill
+-- ftd.row:
+padding-vertical.px: 12
+padding-horizontal.px: 12
+min-width.fixed.px: 374
+min-height.fixed.px: 146
+background.solid: $inherited.colors.background.step-1
+border-color: $inherited.colors.border-strong
+border-width.px: 1
+border-radius.px: 8
+align-self: center
 
---- ftd.text: Lorem Ipsum is simply
-role: $headingtitle
-color: $fpm.color.main.text-strong
+-- ftd.column:
+align-self: center
+width: fill-container
+
+-- ftd.text: Lorem Ipsum is simply
+role: $heading-box-desktop.headingtitle
+color: $inherited.colors.text-strong
 text-align: center
-width: fill
+width: fill-container
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: heading-box-desktop
 
 
 
@@ -269,128 +287,143 @@ width: fill
 
 
 
--- ftd.column heading-box-mobile:
+-- component heading-box-mobile:
 caption title:
 optional integer line-height:
 optional integer weight:
 optional integer size:
-ftd.type headingtitle:
-string font-family:
-border-color: $fpm.color.main.text-strong
-border-width: 1
-border-radius: 8
-padding-vertical: 24
-padding-horizontal: 24
-width: fill
-min-width: fill
-height: 388
-margin-top: 28
-margin-bottom: 28
+ftd.responsive-type headingtitle: 
+;;string font-family:
 
---- ftd.row:
-width: fill
+-- ftd.column:
+border-color: $inherited.colors.text-strong
+border-width.px: 1
+border-radius.px: 8
+padding-vertical.px: 24
+padding-horizontal.px: 24
+width: fill-container
+min-width: fill-container
+height.fixed.px: 388
+margin-top.px: 28
+margin-bottom.px: 28
 
---- ftd.text: $title
-color: $fpm.color.main.text-strong
-role: $fpm.type.copy-large
+-- ftd.row:
+width: fill-container
+
+-- ftd.text: $heading-box-mobile.title
+color: $inherited.colors.text-strong
+role: $inherited.types.copy-large
 anchor: parent
-top: -38
-left: 0
-background-color: $fpm.color.main.background.base
-padding-horizontal: 8
+top.px: -38
+left.px: 0
+background.solid: $inherited.colors.background.base
+padding-horizontal.px: 8
+width: fill-container
 
---- container: ftd.main
+-- end: ftd.row
 
---- ftd.column:
-width: fill
-margin-bottom: 16
+-- ftd.column:
+width: fill-container
+margin-bottom.px: 16
+spacing.px: 24
 
---- ftd.row:
-padding-vertical: 12
-padding-horizontal: 12
-min-width: 300
-min-height: 206
-background-color: $fpm.color.main.background.step-1
-border-color: $fpm.color.main.border-strong
-border-width: 1
-border-radius: 8
-align: center
+-- ftd.column:
+padding-vertical.px: 12
+padding-horizontal.px: 12
+min-width.fixed.px: 300
+min-height.fixed.px: 206
+background.solid: $inherited.colors.background.step-1
+border-color: $inherited.colors.border-strong
+border-width.px: 1
+border-radius.px: 8
 
---- ftd.column:
-align: center
-width: fill
+-- ftd.column:
+width: fill-container
 
---- ftd.text: Lorem Ipsum is simply
-role: $headingtitle
-color: $fpm.color.main.text-strong
+-- ftd.text: Lorem Ipsum is simply
+role: $heading-box-mobile.headingtitle
+color: $inherited.colors.text-strong
 text-align: center
-width: fill
+align-self: center
 
---- container: ftd.main
+-- end: ftd.column
 
---- ftd.column:
-width: fill
-spacing: 12
-id: first-container
+-- end: ftd.column
 
---- ftd.row:
-width: fill
-spacing: 8
+-- ftd.column:
+width: fill-container
+spacing.px: 12
+;; id: first-container
 
---- ftd.text: line-height
-color: $fpm.color.main.text
-role: $fpm.type.label-big
+-- ftd.row:
+width: fill-container
+spacing.px: 8
+
+-- ftd.text: line-height
+color: $inherited.colors.text
+role: $inherited.types.label-big
 white-space: nowrap
 
---- ftd.integer: $line-height
-color: $fpm.color.main.text
-role: $fpm.type.label-big
-width: fill
+-- ftd.integer: $heading-box-mobile.line-height
+color: $inherited.colors.text
+role: $inherited.types.label-big
+width: fill-container
 
---- container: first-container
+-- end: ftd.row
 
---- ftd.row:
-width: fill
-spacing: 8
+-- ftd.row:
+width: fill-container
+spacing.px: 8
 
---- ftd.text: size:
-color: $fpm.color.main.text
-role: $fpm.type.label-big
+-- ftd.text: size:
+color: $inherited.colors.text
+role: $inherited.types.label-big
 white-space: nowrap
 
---- ftd.integer: $size
-color: $fpm.color.main.text
-role: $fpm.type.label-big
-width: fill
+-- ftd.integer: $heading-box-mobile.size
+color: $inherited.colors.text
+role: $inherited.types.label-big
+width: fill-container
 
---- container: first-container
+-- end: ftd.row
 
---- ftd.row:
-width: fill
-spacing: 8
+-- ftd.row:
+width: fill-container
+spacing.px: 8
 
---- ftd.text: weight:
-color: $fpm.color.main.text
-role: $fpm.type.label-big
+-- ftd.text: weight:
+color: $inherited.colors.text
+role: $inherited.types.label-big
 white-space: nowrap
 
---- ftd.integer: $weight
-color: $fpm.color.main.text
-role: $fpm.type.label-big
-width: fill
+-- ftd.integer: $heading-box-mobile.weight
+color: $inherited.colors.text
+role: $inherited.types.label-big
+width: fill-container
 
---- container: first-container
+-- end: ftd.row
 
---- ftd.row:
-width: fill
-spacing: 8
+/-- ftd.row:
+width: fill-container
+spacing.px: 8
 
---- ftd.text: Font-family:
-color: $fpm.color.main.text
-role: $fpm.type.label-big
+/-- ftd.text: Font-family:
+color: $inherited.colors.text
+role: $inherited.types.label-big
 white-space: nowrap
 
---- ftd.text: $font-family
-color: $fpm.color.main.text
-role: $fpm.type.label-big
-width: fill
+/-- ftd.text: $heading-box-mobile.font-family
+color: $inherited.colors.text
+role: $inherited.types.label-big
+width: fill-container
+
+/-- end: ftd.row
+
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: heading-box-mobile
