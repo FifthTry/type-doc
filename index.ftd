@@ -1,132 +1,146 @@
 
-;; -- string font-family: $fpm.font-display
 
 
 
 
 
+
+-- ftd.type-data font-type:
+heading-hero: $inherited.types.heading-hero
+heading-large: $inherited.types.heading-large
+heading-medium: $inherited.types.heading-medium
+heading-small: $inherited.types.heading-small
+heading-tiny: $inherited.types.heading-tiny
+copy-large: $inherited.types.copy-large
+copy-regular: $inherited.types.copy-regular
+copy-small: $inherited.types.copy-small
+fine-print: $inherited.types.fine-print
+blockquote: $inherited.types.blockquote
+source-code: $inherited.types.source-code
+label-large: $inherited.types.label-large
+label-small: $inherited.types.label-small
+button-large: $inherited.types.button-large
+button-medium: $inherited.types.button-medium
+button-small: $inherited.types.button-small
+link: $inherited.types.link
+
+
+-- display-type:
+types: $font-type
+
+-- component display-type:
+ftd.type-data types:
 
 -- ftd.column:
 width: fill-container
-padding-horizontal.px: 20
-padding-vertical.px: 20
-padding-horizontal.px if { ftd.device == "mobile" }: 20
 background.solid: $inherited.colors.background.base
 
--- ftd.text: Typography
-role: $inherited.types.heading-large
-color: $inherited.colors.text-strong
-margin-bottom.px: 28
-
 -- heading-box: \$inherited.types.heading-hero
-line-height: 104
+line-height: 20
 size: 80
 weight: 400
-headingtitle: $inherited.types.heading-hero
+headingtitle: $display-type.types.heading-hero
 
 -- heading-box: \$inherited.types.heading-large
-line-height: 65
-size: 50
+line-height: 20
+size: 80
 weight: 400
-headingtitle: $inherited.types.heading-large
+headingtitle: $display-type.types.heading-large
 
 -- heading-box: \$inherited.types.heading-medium
-line-height: 57
-size: 38
+line-height: 20
+size: 80
 weight: 400
-headingtitle: $inherited.types.heading-medium
+headingtitle: $display-type.types.heading-medium
+
 
 -- heading-box: \$inherited.types.heading-small
-line-height: 31
-size: 24
+line-height: 20
+size: 80
 weight: 400
-headingtitle: $inherited.types.heading-small
+headingtitle: $display-type.types.heading-small
 
 -- heading-box: \$inherited.types.heading-tiny
-line-height: 26
-size: 20
+line-height: 20
+size: 80
 weight: 400
-headingtitle: $inherited.types.heading-tiny
+headingtitle: $display-type.types.heading-tiny
 
 -- heading-box: \$inherited.types.copy-large
-line-height: 34
-size: 22
+line-height: 20
+size: 80
 weight: 400
-headingtitle: $inherited.types.copy-large
+headingtitle: $display-type.types.copy-large
 
 -- heading-box: \$inherited.types.copy-regular
-line-height: 30
-size: 18
+line-height: 20
+size: 80
 weight: 400
-headingtitle: $inherited.types.copy-regular
+headingtitle: $display-type.types.copy-regular
 
 -- heading-box: \$inherited.types.copy-small
-line-height: 24
-size: 14
+line-height: 20
+size: 80
 weight: 400
-headingtitle: $inherited.types.copy-small
+headingtitle: $display-type.types.copy-small
 
 -- heading-box: \$inherited.types.fine-print
-line-height: 16
-size: 12
+line-height: 20
+size: 80
 weight: 400
-headingtitle: $inherited.types.fine-print
+headingtitle: $display-type.types.fine-print
 
 -- heading-box: \$inherited.types.blockquote
-line-height: 21
-size: 16
+line-height: 20
+size: 80
 weight: 400
-headingtitle: $inherited.types.blockquote
+headingtitle: $display-type.types.blockquote
 
 -- heading-box: \$inherited.types.source-code
-line-height: 30
-size: 18
+line-height: 20
+size: 80
 weight: 400
-headingtitle: $inherited.types.source-code
+headingtitle: $display-type.types.source-code
 
 -- heading-box: \$inherited.types.label-large
-line-height: 19
-size: 14
+line-height: 20
+size: 80
 weight: 400
-headingtitle: $inherited.types.label-large
+headingtitle: $display-type.types.label-large
 
 -- heading-box: \$inherited.types.label-small
-line-height: 16
-size: 12
+line-height: 20
+size: 80
 weight: 400
-headingtitle: $inherited.types.label-small
+headingtitle: $display-type.types.label-small
 
 -- heading-box: \$inherited.types.button-large
-line-height: 24
-size: 18
+line-height: 20
+size: 80
 weight: 400
-headingtitle: $inherited.types.button-large
+headingtitle: $display-type.types.button-large
 
 -- heading-box: \$inherited.types.button-medium
-line-height: 21
-size: 16
+line-height: 20
+size: 80
 weight: 400
-headingtitle: $inherited.types.button-medium
+headingtitle: $display-type.types.button-medium
 
 -- heading-box: \$inherited.types.button-small
-line-height: 19
-size: 14
+line-height: 20
+size: 80
 weight: 400
-headingtitle: $inherited.types.button-small
+headingtitle: $display-type.types.button-small
 
 -- heading-box: \$inherited.types.link
-line-height: 19
-size: 14
+line-height: 20
+size: 80
 weight: 400
-headingtitle: $inherited.types.link
+headingtitle: $display-type.types.link
 
 -- end: ftd.column
 
-
-
-
-
-
+-- end: display-type
 
 
 

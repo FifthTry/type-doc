@@ -1,4 +1,4 @@
-# Welcome to your [FPM site](https://fpm.dev/)
+# Welcome to your [FPM site](https://fastn.dev/)
 
 FPM Blank Package Template Repo
 
@@ -20,7 +20,7 @@ Inside of your FPM project, you'll see the following folders and files:
 │   └── fifthtry.github.io/
 │   	└── All downloaded dependencies
 │   	
-├── FPM.ftd
+├── fastn.ftd
 ├── index.ftd
 └── README.md
 ```
@@ -38,4 +38,4 @@ All commands are run from the root of the project, from a terminal:
 
 ## 👀 Want to learn more?
 
-Feel free to check [our documentation](https://fpm.dev/) or jump into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
+Feel free to check [our documentation](https://fastn.dev/) or jump into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
