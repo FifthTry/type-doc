@@ -18,71 +18,107 @@ role: $inherited.types.heading-large
 color: $inherited.colors.text-strong
 margin-bottom.px: 28
 
+-- heading-box: \$inherited.types.heading-hero
+line-height: 104
+size: 80
+weight: 400
+headingtitle: $inherited.types.heading-hero
+
 -- heading-box: \$inherited.types.heading-large
-line-height: 48
-size: 40
+line-height: 65
+size: 50
 weight: 400
 headingtitle: $inherited.types.heading-large
 
 -- heading-box: \$inherited.types.heading-medium
-line-height: 44
-size: 32
+line-height: 57
+size: 38
 weight: 400
 headingtitle: $inherited.types.heading-medium
 
 -- heading-box: \$inherited.types.heading-small
-line-height: 36
+line-height: 31
 size: 24
 weight: 400
 headingtitle: $inherited.types.heading-small
 
--- heading-box: \$inherited.types.heading-hero
-line-height: 60
-size: 48
+-- heading-box: \$inherited.types.heading-tiny
+line-height: 26
+size: 20
 weight: 400
-headingtitle: $inherited.types.heading-hero
-
--- heading-box: \$inherited.types.copy-tight
-line-height: 20
-size: 16
-weight: 400
-headingtitle: $inherited.types.copy-tight
-
--- heading-box: \$inherited.types.copy-relaxed
-line-height: 24
-size: 16
-weight: 400
-headingtitle: $inherited.types.copy-relaxed
+headingtitle: $inherited.types.heading-tiny
 
 -- heading-box: \$inherited.types.copy-large
-line-height: 28
-size: 20
+line-height: 34
+size: 22
 weight: 400
 headingtitle: $inherited.types.copy-large
 
--- heading-box: \$inherited.types.label-big
-line-height: 22
-size: 16
+-- heading-box: \$inherited.types.copy-regular
+line-height: 30
+size: 18
 weight: 400
-headingtitle: $inherited.types.label-big
+headingtitle: $inherited.types.copy-regular
 
--- heading-box: \$inherited.types.label-small
-line-height: 16
+-- heading-box: \$inherited.types.copy-small
+line-height: 24
 size: 14
 weight: 400
-headingtitle: $inherited.types.label-small
+headingtitle: $inherited.types.copy-small
 
 -- heading-box: \$inherited.types.fine-print
 line-height: 16
-size: 14
+size: 12
 weight: 400
 headingtitle: $inherited.types.fine-print
 
 -- heading-box: \$inherited.types.blockquote
-line-height: 22
+line-height: 21
 size: 16
 weight: 400
 headingtitle: $inherited.types.blockquote
+
+-- heading-box: \$inherited.types.source-code
+line-height: 30
+size: 18
+weight: 400
+headingtitle: $inherited.types.source-code
+
+-- heading-box: \$inherited.types.label-large
+line-height: 19
+size: 14
+weight: 400
+headingtitle: $inherited.types.label-large
+
+-- heading-box: \$inherited.types.label-small
+line-height: 16
+size: 12
+weight: 400
+headingtitle: $inherited.types.label-small
+
+-- heading-box: \$inherited.types.button-large
+line-height: 24
+size: 18
+weight: 400
+headingtitle: $inherited.types.button-large
+
+-- heading-box: \$inherited.types.button-medium
+line-height: 21
+size: 16
+weight: 400
+headingtitle: $inherited.types.button-medium
+
+-- heading-box: \$inherited.types.button-small
+line-height: 19
+size: 14
+weight: 400
+headingtitle: $inherited.types.button-small
+
+-- heading-box: \$inherited.types.link
+line-height: 19
+size: 14
+weight: 400
+headingtitle: $inherited.types.link
 
 -- end: ftd.column
 
@@ -149,7 +185,7 @@ border-radius.px: 8
 padding-vertical.px: 24
 padding-horizontal.px: 24
 width.fixed.px: 650
-height.fixed.px: 196
+height: auto
 margin-top.px: 28
 margin-bottom.px: 28
 
@@ -169,73 +205,73 @@ padding-horizontal.px: 8
 
 -- ftd.row:
 width: fill-container
-spacing.px: 24
+spacing.fixed.px: 24
 
 
 -- ftd.column:
 width.fixed.percent: 35
-spacing.px: 12
+spacing.fixed.px: 12
 
 -- ftd.row:
 width: fill-container
-spacing.px: 8
+spacing.fixed.px: 8
 
 -- ftd.text: line-height
 color: $inherited.colors.text
-role: $inherited.types.label-big
+role: $inherited.types.label-large
 white-space: nowrap
 
 -- ftd.integer: $heading-box-desktop.line-height
 color: $inherited.colors.text
-role: $inherited.types.label-big
+role: $inherited.types.label-large
 width: fill-container
 
 -- end: ftd.row
 
 -- ftd.row:
 width: fill-container
-spacing.px: 8
+spacing.fixed.px: 8
 
 -- ftd.text: size:
 color: $inherited.colors.text
-role: $inherited.types.label-big
+role: $inherited.types.label-large
 white-space: nowrap
 
 -- ftd.integer: $heading-box-desktop.size
 color: $inherited.colors.text
-role: $inherited.types.label-big
+role: $inherited.types.label-large
 width: fill-container
 
 -- end: ftd.row
 
 -- ftd.row:
 width: fill-container
-spacing.px: 8
+spacing.fixed.px: 8
 
 -- ftd.text: weight:
 color: $inherited.colors.text
-role: $inherited.types.label-big
+role: $inherited.types.label-large
 white-space: nowrap
 
 -- ftd.integer: $heading-box-desktop.weight
 color: $inherited.colors.text
-role: $inherited.types.label-big
+role: $inherited.types.label-large
 width: fill-container
 
 -- end: ftd.row
 
 /-- ftd.row:
 width: fill-container
-spacing.px: 8
+spacing.fixed.px: 8
 
 /-- ftd.text: Font-family:
 color: $inherited.colors.text
-role: $inherited.types.label-big
+role: $inherited.types.label-large
 white-space: nowrap
 
 /-- ftd.text: $heading-box-desktop.font-family
 color: $inherited.colors.text
-role: $inherited.types.label-big
+role: $inherited.types.label-large
 width: fill-container
 
 /-- end: ftd.row
@@ -325,7 +361,7 @@ width: fill-container
 -- ftd.column:
 width: fill-container
 margin-bottom.px: 16
-spacing.px: 24
+spacing.fixed.px: 24
 
 -- ftd.column:
 padding-vertical.px: 12
@@ -352,69 +388,69 @@ align-self: center
 
 -- ftd.column:
 width: fill-container
-spacing.px: 12
+spacing.fixed.px: 12
 ;; id: first-container
 
 -- ftd.row:
 width: fill-container
-spacing.px: 8
+spacing.fixed.px: 8
 
 -- ftd.text: line-height
 color: $inherited.colors.text
-role: $inherited.types.label-big
+role: $inherited.types.label-large
 white-space: nowrap
 
 -- ftd.integer: $heading-box-mobile.line-height
 color: $inherited.colors.text
-role: $inherited.types.label-big
+role: $inherited.types.label-large
 width: fill-container
 
 -- end: ftd.row
 
 -- ftd.row:
 width: fill-container
-spacing.px: 8
+spacing.fixed.px: 8
 
 -- ftd.text: size:
 color: $inherited.colors.text
-role: $inherited.types.label-big
+role: $inherited.types.label-large
 white-space: nowrap
 
 -- ftd.integer: $heading-box-mobile.size
 color: $inherited.colors.text
-role: $inherited.types.label-big
+role: $inherited.types.label-large
 width: fill-container
 
 -- end: ftd.row
 
 -- ftd.row:
 width: fill-container
-spacing.px: 8
+spacing.fixed.px: 8
 
 -- ftd.text: weight:
 color: $inherited.colors.text
-role: $inherited.types.label-big
+role: $inherited.types.label-large
 white-space: nowrap
 
 -- ftd.integer: $heading-box-mobile.weight
 color: $inherited.colors.text
-role: $inherited.types.label-big
+role: $inherited.types.label-large
 width: fill-container
 
 -- end: ftd.row
 
 /-- ftd.row:
 width: fill-container
-spacing.px: 8
+spacing.fixed.px: 8
 
 /-- ftd.text: Font-family:
 color: $inherited.colors.text
-role: $inherited.types.label-big
+role: $inherited.types.label-large
 white-space: nowrap
 
 /-- ftd.text: $heading-box-mobile.font-family
 color: $inherited.colors.text
-role: $inherited.types.label-big
+role: $inherited.types.label-large
 width: fill-container
 
 /-- end: ftd.row
