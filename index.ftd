@@ -37,6 +37,7 @@ width: fill-container
 background.solid: $inherited.colors.background.base
 padding-vertical.px: 48
 padding-horizontal.px: 100
+padding-horizontal.px if { ftd.device == "mobile" }: 24
 
 -- ftd.text: Typography Documentation
 role: $display-type.types.heading-large
