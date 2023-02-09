@@ -1,3 +1,131 @@
+-- import: fastn
+
+
+
+
+-- ftd.type heading-hero-mobile:
+line-height.px: 64
+size.px: 48
+letter-spacing.px: 0
+weight: 700
+font-family: sans-serif
+
+-- ftd.type heading-hero-desktop:
+line-height.px: 104
+size.px: 80
+letter-spacing.px: 0
+font-family: sans-serif
+weight: 700
+
+-- ftd.responsive-type heading-hero:
+desktop: $heading-hero-desktop
+mobile: $heading-hero-mobile
+
+
+
+
+
+-- ftd.type heading-large-mobile:
+line-height.px: 54
+size.px: 36
+letter-spacing.px: 0
+weight: 700
+font-family: sans-serif
+
+-- ftd.type heading-large-desktop:
+line-height.px: 65
+size.px: 50
+letter-spacing.px: 0
+font-family: sans-serif
+weight: 700
+
+-- ftd.responsive-type heading-large:
+desktop: $heading-large-desktop
+mobile: $heading-large-mobile
+
+
+
+
+
+-- ftd.type heading-medium-mobile:
+line-height.px: 40
+size.px: 26
+letter-spacing.px: 0
+weight: 700
+font-family: sans-serif
+
+-- ftd.type heading-medium-desktop:
+line-height.px: 57
+size.px: 38
+letter-spacing.px: 0
+font-family: sans-serif
+weight: 700
+
+-- ftd.responsive-type heading-medium:
+desktop: $heading-medium-desktop
+mobile: $heading-medium-mobile
+
+
+
+-- ftd.type heading-small-mobile:
+line-height.px: 29
+size.px: 22
+letter-spacing.px: 0
+weight: 700
+font-family: sans-serif
+
+
+-- ftd.type heading-small-desktop:
+line-height.px: 31
+size.px: 24
+letter-spacing.px: 0
+font-family: sans-serif
+weight: 700
+
+-- ftd.responsive-type heading-small:
+desktop: $heading-small-desktop
+mobile: $heading-small-mobile
+
+
+-- ftd.type heading-tiny-mobile:
+line-height.px: 24
+size.px: 18
+letter-spacing.px: 0
+weight: 700
+font-family: sans-serif
+
+
+-- ftd.type heading-tiny-desktop:
+line-height.px: 26
+size.px: 20
+letter-spacing.px: 0
+font-family: sans-serif
+weight: 700
+
+-- ftd.responsive-type heading-tiny:
+desktop: $heading-tiny-desktop
+mobile: $heading-tiny-mobile
+
+
+
+-- ftd.type copy-large-mobile:
+line-height.px: 28
+size.px: 18
+letter-spacing.px: 0
+weight: 400
+font-family: sans-serif
+
+
+-- ftd.type copy-large-desktop:
+line-height.px: 34
+size.px: 22
+letter-spacing.px: 0
+font-family: sans-serif
+weight: 400
+
+-- ftd.responsive-type copy-large:
+desktop: $copy-large-desktop
+mobile: $copy-large-mobile
 
 
 
@@ -5,32 +133,316 @@
 
 
 
--- ftd.type-data font-type:
-heading-hero: $inherited.types.heading-hero
-heading-large: $inherited.types.heading-large
-heading-medium: $inherited.types.heading-medium
-heading-small: $inherited.types.heading-small
-heading-tiny: $inherited.types.heading-tiny
-copy-large: $inherited.types.copy-large
-copy-regular: $inherited.types.copy-regular
-copy-small: $inherited.types.copy-small
-fine-print: $inherited.types.fine-print
-blockquote: $inherited.types.blockquote
-source-code: $inherited.types.source-code
-label-large: $inherited.types.label-large
-label-small: $inherited.types.label-small
-button-large: $inherited.types.button-large
-button-medium: $inherited.types.button-medium
-button-small: $inherited.types.button-small
-link: $inherited.types.link
+-- ftd.type copy-regular-mobile:
+line-height.px: 24
+size.px: 16
+letter-spacing.px: 0
+weight: 400
+font-family: sans-serif
+
+
+-- ftd.type copy-regular-desktop:
+line-height.px: 30
+size.px: 18
+letter-spacing.px: 0
+font-family: sans-serif
+weight: 400
+
+-- ftd.responsive-type copy-regular:
+desktop: $copy-regular-desktop
+mobile: $copy-regular-mobile
+
+
+
+
+
+-- ftd.type copy-small-mobile:
+line-height.px: 16
+size.px: 12
+letter-spacing.px: 0
+weight: 400
+font-family: sans-serif
+
+
+-- ftd.type copy-small-desktop:
+line-height.px: 24
+size.px: 14
+letter-spacing.px: 0
+font-family: sans-serif
+weight: 400
+
+-- ftd.responsive-type copy-small:
+desktop: $copy-small-desktop
+mobile: $copy-small-mobile
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.type label-large-mobile:
+line-height.px: 19
+size.px: 14
+letter-spacing.px: 0
+weight: 400
+font-family: sans-serif
+
+
+-- ftd.type label-large-desktop:
+line-height.px: 19
+size.px: 14
+letter-spacing.px: 0
+font-family: sans-serif
+weight: 400
+
+-- ftd.responsive-type label-large:
+desktop: $label-large-desktop
+mobile: $label-large-mobile
+
+
+
+
+
+
+
+-- ftd.type label-small-mobile:
+line-height.px: 16
+size.px: 12
+letter-spacing.px: 0
+weight: 400
+font-family: sans-serif
+
+
+-- ftd.type label-small-desktop:
+line-height.px: 16
+size.px: 12
+letter-spacing.px: 0
+font-family: sans-serif
+weight: 400
+
+-- ftd.responsive-type label-small:
+desktop: $label-small-desktop
+mobile: $label-small-mobile
+
+
+
+
+
+-- ftd.type fine-print-mobile:
+line-height.px: 16
+size.px: 12
+letter-spacing.px: 0
+weight: 400
+font-family: sans-serif
+
+
+-- ftd.type fine-print-desktop:
+line-height.px: 16
+size.px: 12
+letter-spacing.px: 0
+font-family: sans-serif
+weight: 400
+
+-- ftd.responsive-type fine-print:
+desktop: $fine-print-desktop
+mobile: $fine-print-mobile
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.type blockquote-mobile:
+line-height.px: 21
+size.px: 16
+letter-spacing.px: 0
+weight: 400
+font-family: sans-serif
+
+
+-- ftd.type blockquote-desktop:
+line-height.px: 21
+size.px: 16
+letter-spacing.px: 0
+font-family: sans-serif
+weight: 400
+
+-- ftd.responsive-type blockquote:
+desktop: $blockquote-desktop
+mobile: $blockquote-mobile
+
+
+
+-- ftd.type source-code-mobile:
+line-height.px: 21
+size.px: 16
+letter-spacing.px: 0
+weight: 400
+font-family: sans-serif
+
+
+-- ftd.type source-code-desktop:
+line-height.px: 30
+size.px: 18
+letter-spacing.px: 0
+font-family: sans-serif
+weight: 400
+
+-- ftd.responsive-type source-code:
+desktop: $source-code-desktop
+mobile: $source-code-mobile
+
+
+
+
+
+-- ftd.type button-large-mobile:
+line-height.px: 24
+size.px: 18
+letter-spacing.px: 0
+weight: 700
+font-family: sans-serif
+
+
+-- ftd.type button-large-desktop:
+line-height.px: 24
+size.px: 18
+letter-spacing.px: 0
+font-family: sans-serif
+weight: 700
+
+-- ftd.responsive-type button-large:
+desktop: $button-large-desktop
+mobile: $button-large-mobile
+
+
+-- ftd.type button-medium-mobile:
+line-height.px: 21
+size.px: 16
+letter-spacing.px: 0
+weight: 400
+font-family: sans-serif
+
+
+-- ftd.type button-medium-desktop:
+line-height.px: 21
+size.px: 16
+letter-spacing.px: 0
+font-family: sans-serif
+weight: 700
+
+-- ftd.responsive-type button-medium:
+desktop: $button-medium-desktop
+mobile: $button-medium-mobile
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- ftd.type button-small-mobile:
+line-height.px: 19
+size.px: 14
+letter-spacing.px: 0
+weight: 400
+font-family: sans-serif
+
+
+-- ftd.type button-small-desktop:
+line-height.px: 19
+size.px: 14
+letter-spacing.px: 0
+font-family: sans-serif
+weight: 700
+
+-- ftd.responsive-type button-small:
+desktop: $button-small-desktop
+mobile: $button-small-mobile
+
+
+
+
+
+-- ftd.type link-mobile:
+line-height.px: 19
+size.px: 14
+letter-spacing.px: 0
+weight: 400
+font-family: sans-serif
+
+
+-- ftd.type link-desktop:
+line-height.px: 19
+size.px: 14
+letter-spacing.px: 0
+font-family: sans-serif
+weight: 700
+
+-- ftd.responsive-type link:
+desktop: $link-desktop
+mobile: $link-mobile
+
+
+
+
+-- ftd.type-data types:
+heading-hero: $heading-hero
+heading-large: $heading-large
+heading-medium: $heading-medium
+heading-small: $heading-small
+heading-tiny: $heading-tiny
+copy-large: $copy-large
+copy-regular: $copy-regular
+copy-small: $copy-small
+fine-print: $fine-print
+blockquote: $blockquote
+source-code: $source-code
+label-large: $label-large
+label-small: $label-small
+button-large: $button-large
+button-medium: $button-medium
+button-small: $button-small
+link: $link
 
 
 -- display-type:
-types: $font-type
+types: $types
+
+
+
+
+
+
+
+
+
 
 -- component display-type:
 ftd.type-data types:
-
 
 -- ftd.column:
 width: fill-container
@@ -44,107 +456,109 @@ role: $display-type.types.heading-large
 color: $inherited.colors.text-strong
 padding-vertical.px: 24
 
+
 -- heading-box: \$inherited.types.heading-hero
 line-height: 104
 size: 80
-weight: 400
-headingtitle: $inherited.types.heading-hero
+weight: 700
+headingtitle: $display-type.types.heading-hero
 
 -- heading-box: \$inherited.types.heading-large
 line-height: 65
 size: 50
-weight: 400
-headingtitle: $inherited.types.heading-large
+weight: 700
+headingtitle: $display-type.types.heading-large
 
 -- heading-box: \$inherited.types.heading-medium
 line-height: 57
 size: 38
-weight: 400
-headingtitle: $inherited.types.heading-medium
+weight: 700
+headingtitle: $display-type.types.heading-medium
+
 
 -- heading-box: \$inherited.types.heading-small
 line-height: 31
 size: 24
-weight: 400
-headingtitle: $inherited.types.heading-small
+weight: 700
+headingtitle: $display-type.types.heading-small
 
 -- heading-box: \$inherited.types.heading-tiny
 line-height: 26
 size: 20
-weight: 400
-headingtitle: $inherited.types.heading-tiny
+weight: 700
+headingtitle: $display-type.types.heading-tiny
 
 -- heading-box: \$inherited.types.copy-large
 line-height: 34
 size: 22
 weight: 400
-headingtitle: $inherited.types.copy-large
+headingtitle: $display-type.types.copy-large
 
 -- heading-box: \$inherited.types.copy-regular
 line-height: 30
 size: 18
 weight: 400
-headingtitle: $inherited.types.copy-regular
+headingtitle: $display-type.types.copy-regular
 
 -- heading-box: \$inherited.types.copy-small
 line-height: 24
 size: 14
 weight: 400
-headingtitle: $inherited.types.copy-small
+headingtitle: $display-type.types.copy-small
 
 -- heading-box: \$inherited.types.fine-print
 line-height: 16
 size: 12
 weight: 400
-headingtitle: $inherited.types.fine-print
+headingtitle: $display-type.types.fine-print
 
 -- heading-box: \$inherited.types.blockquote
 line-height: 21
 size: 16
 weight: 400
-headingtitle: $inherited.types.blockquote
+headingtitle: $display-type.types.blockquote
 
 -- heading-box: \$inherited.types.source-code
 line-height: 30
 size: 18
 weight: 400
-headingtitle: $inherited.types.source-code
+headingtitle: $display-type.types.source-code
 
 -- heading-box: \$inherited.types.label-large
 line-height: 19
 size: 14
 weight: 400
-headingtitle: $inherited.types.label-large
+headingtitle: $display-type.types.label-large
 
 -- heading-box: \$inherited.types.label-small
 line-height: 16
 size: 12
 weight: 400
-headingtitle: $inherited.types.label-small
+headingtitle: $display-type.types.label-small
 
 -- heading-box: \$inherited.types.button-large
 line-height: 24
 size: 18
-weight: 400
-headingtitle: $inherited.types.button-large
+weight: 700
+headingtitle: $display-type.types.button-large
 
 -- heading-box: \$inherited.types.button-medium
 line-height: 21
 size: 16
-weight: 400
-headingtitle: $inherited.types.button-medium
+weight: 700
+headingtitle: $display-type.types.button-medium
 
 -- heading-box: \$inherited.types.button-small
 line-height: 19
 size: 14
-weight: 400
-headingtitle: $inherited.types.button-small
+weight: 700
+headingtitle: $display-type.types.button-small
 
 -- heading-box: \$inherited.types.link
 line-height: 19
 size: 14
-weight: 400
-headingtitle: $inherited.types.link
+weight: 700
+headingtitle: $display-type.types.link
 
 -- end: ftd.column
 
